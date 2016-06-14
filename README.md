@@ -12,5 +12,8 @@ Airline Tickets Store - Server and Android Client
   (www.latam.com)
 
 
-2)
+2) Concept:
+  
+  - There is a low performance pre-alpha version of the search engine working in https://thiagosteiner.shinyapps.io/Shiny/
+  - This version in just a concept test
 
