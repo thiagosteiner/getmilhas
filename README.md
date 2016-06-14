@@ -6,9 +6,9 @@ Airline Tickets Store - Server and Android Client
   - GetMilhas is a Airline Ticket Store that sells tickets cheaper than Airlines Stores. 
   - GetMilhas uses Air Miles to pay Airline Companies for the tickets.
   - Customers pays cash to GetMilhas with credit card.
-  - GetMilhas has a search engine and webscrapper that compares the prices using Air Miles and Cash. Latam Airlines       
-  (www.latam.com) and Multiplus (www.pontosmultiplus.com.br) will be the targets for the webscrapper and benchmarks for the prices.
-  - GetMilhas calculate the the price of the ticket based in the Air Miles amount scrapped from Multiplus (www.pontosmultiplus.com.br) and the price in cash scrapped from Latam Airlines       
+  - GetMilhas has a search engine and web scraper that compares the prices using Air Miles and Cash. Latam Airlines       
+  (www.latam.com) and Multiplus (www.pontosmultiplus.com.br) will be the targets for the web scraper and benchmarks for the prices.
+  - GetMilhas calculate the the price of the ticket based in the Air Miles amount scraped from Multiplus (www.pontosmultiplus.com.br) and the price in cash scraped from Latam Airlines       
   (www.latam.com)
 
 
