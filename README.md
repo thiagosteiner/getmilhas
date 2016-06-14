@@ -1,5 +1,5 @@
 # getmilhas
-Airline Tickets Store - Server and Android Client
+Airline Tickets Store - Cloud Server and Android Client
 
 1) Description: 
   
