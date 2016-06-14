@@ -17,3 +17,11 @@ Airline Tickets Store - Server and Android Client
   - There is a low performance pre-alpha version of the search engine working in https://thiagosteiner.shinyapps.io/Shiny/
   - This version in just a concept test
 
+3) Technology:
+
+  
+  3.1) Cloud Server:
+    
+    -MySql
+    -Tomcat
+    -Java Rest Webservice
