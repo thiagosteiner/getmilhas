@@ -8,7 +8,7 @@ Airline Tickets Store - Cloud Server and Android Client
   - Customers pay cash to GetMilhas using credit card.
   - GetMilhas has a search engine and web scraper that compares the prices using Air Miles and Cash. Latam Airlines       
   (www.latam.com) and Multiplus (www.pontosmultiplus.com.br) will be the targets for the web scraper and benchmarks for the prices.
-  - GetMilhas calculates the the price of the ticket based on the Air Miles amount scraped from Multiplus (www.pontosmultiplus.com.br) and the price in cash scraped from Latam Airlines (www.latam.com).
+  - GetMilhas calculates the price of the ticket based on the Air Miles amount scraped from Multiplus (www.pontosmultiplus.com.br) and the price in cash scraped from Latam Airlines (www.latam.com).
 
 
 2) Concept:
