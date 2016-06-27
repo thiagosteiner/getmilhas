@@ -1,0 +1,15 @@
+Atores:
+
+- Usuário
+- Sistema
+- Funcionário
+
+Casos de Uso:
+
+- Usuário faz uma consulta de preço de passagem.
+- Sistema apresenta uma lista de vôos. 
+- Usuário escolhe os vôos. 
+- Usuário preenche dados e faz a encomenda. 
+- Sistema encaminha um email para o funcionário do site com os dados do usuário e detalhe da encomenda. 
+- Sistema encaminha um email para o usuário do site com confirmação de que a encomenda será processada.
+- Funcionário processa a encomenda off-line e encaminha email para o usuário final.
