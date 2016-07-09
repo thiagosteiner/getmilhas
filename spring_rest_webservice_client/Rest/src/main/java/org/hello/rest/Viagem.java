@@ -17,4 +17,11 @@ public class Viagem {
         this.lista_voos=lista_voos;
     }
 
+    public void setLista_voos(List<Voo> lista_voos){
+        this.lista_voos=lista_voos;
+    }
+
+    public List<Voo> getLista_voos() {
+        return lista_voos;
+    }
 }

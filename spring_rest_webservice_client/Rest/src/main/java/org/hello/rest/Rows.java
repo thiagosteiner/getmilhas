@@ -43,5 +43,68 @@ public final class Rows {
 
     }
 
+    public void setCpf(String cpf){
+        this.cpf=cpf;
+    }
+    public String getCpf(){
+        return this.cpf;
+    }
+
+    public void setSenha(String senha){
+        this.senha=senha;
+    }
+    public String getSenha(){
+        return this.cpf;
+    }
+
+    public void setOrigem(String origem){
+        this.origem=origem;
+    }
+    public String getOrigem(){
+        return this.origem;
+    }
+
+    public void setDestino(String destino){
+        this.destino=destino;
+    }
+    public String getDestino(){
+        return this.destino;
+    }
+
+    public void setData_partida(String data_partida){
+        this.data_partida=data_partida;
+    }
+    public String getData_partida(){
+        return this.data_partida;
+    }
+
+    public void setData_retorno(String data_retorno){
+        this.data_retorno=data_retorno;
+    }
+    public String getData_retorno(){
+        return this.data_partida;
+    }
+
+    public void setLista_idas(List<Viagem> lista_idas){
+        this.lista_idas=lista_idas;
+    }
+    public List<Viagem> getLista_idas(){
+        return this.lista_idas;
+    }
+
+    public void setLista_voltas(List<Viagem> lista_voltas){
+        this.lista_voltas=lista_voltas;
+    }
+    public List<Viagem> getLista_voltas(){
+        return this.lista_voltas;
+    }
+
+    public void setError(String error){
+        this.error=error;
+    }
+    public String getError(){
+        return this.error;
+    }
+
 
 }
