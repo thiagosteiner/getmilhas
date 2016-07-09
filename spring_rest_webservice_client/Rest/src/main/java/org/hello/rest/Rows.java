@@ -1,23 +1,36 @@
 package org.hello.rest;
 
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by steiner on 06/07/16.
  */
 public final class Rows {
-    String cpf;
-    String senha;
-    String origem;
-    String destino;
-    String data_partida;
-    String data_retorno;
-    Viagem[] lista_idas;
-    Viagem[] lista_voltas;
-    String error;
+    @JsonProperty("cpf") public String cpf;
+    @JsonProperty("senha") public String senha;
+    @JsonProperty("origem") public String origem;
+    @JsonProperty("destino") public String destino;
+    @JsonProperty("data_partida") public String data_partida;
+    @JsonProperty("data_retorno") public String data_retorno;
+    @JsonProperty("lista_idas") public List<Viagem> lista_idas =new ArrayList<Viagem>();
+    @JsonProperty("lista_voltas") public List<Viagem> lista_voltas=new ArrayList<Viagem>();
+    @JsonProperty("error") public String error;
 
-
-    public Rows(String cpf,String senha,String origem,String destino,String data_partida,
-                String data_retorno,Viagem[] lista_idas,Viagem[] lista_voltas,String error) {
+    @JsonCreator
+    public Rows(@JsonProperty("cpf")String cpf,
+                @JsonProperty("senha")String senha,
+                @JsonProperty("origem")String origem,
+                @JsonProperty("destino")String destino,
+                @JsonProperty("data_partida")String data_partida,
+                @JsonProperty("data_retorno")String data_retorno,
+                @JsonProperty("lista_idas")List<Viagem> lista_idas,
+                @JsonProperty("lista_voltas")List<Viagem> lista_voltas,
+                @JsonProperty("error")String error) {
         this.cpf = cpf;
         this.senha=senha;
         this.origem=origem;
