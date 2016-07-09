@@ -11,8 +11,8 @@ import java.util.List;
  * Created by steiner on 05/07/16.
  */
 public final class Response {
-    @JsonProperty("headers") public List<String> headers= new ArrayList<String>();
-    @JsonProperty("rows") public List<Rows> rows=new ArrayList<Rows>();
+    @JsonProperty("headers") private List<String> headers= new ArrayList<String>();
+    @JsonProperty("rows") private List<Rows> rows=new ArrayList<Rows>();
 
     @JsonCreator
     public Response(@JsonProperty("headers") List<String> headers, @JsonProperty("rows") List<Rows> rows){

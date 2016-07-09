@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 public class Viagem {
-    List<Voo> lista_voos=new ArrayList<Voo>();
+    private List<Voo> lista_voos=new ArrayList<Voo>();
 
 
     public Viagem(List<Voo> lista_voos){

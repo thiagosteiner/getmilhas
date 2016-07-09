@@ -11,15 +11,15 @@ import java.util.List;
  * Created by steiner on 06/07/16.
  */
 public final class Rows {
-    @JsonProperty("cpf") public String cpf;
-    @JsonProperty("senha") public String senha;
-    @JsonProperty("origem") public String origem;
-    @JsonProperty("destino") public String destino;
-    @JsonProperty("data_partida") public String data_partida;
-    @JsonProperty("data_retorno") public String data_retorno;
-    @JsonProperty("lista_idas") public List<Viagem> lista_idas =new ArrayList<Viagem>();
-    @JsonProperty("lista_voltas") public List<Viagem> lista_voltas=new ArrayList<Viagem>();
-    @JsonProperty("error") public String error;
+    @JsonProperty("cpf") private String cpf;
+    @JsonProperty("senha") private String senha;
+    @JsonProperty("origem") private String origem;
+    @JsonProperty("destino") private String destino;
+    @JsonProperty("data_partida") private String data_partida;
+    @JsonProperty("data_retorno") private String data_retorno;
+    @JsonProperty("lista_idas") private List<Viagem> lista_idas =new ArrayList<Viagem>();
+    @JsonProperty("lista_voltas") private List<Viagem> lista_voltas=new ArrayList<Viagem>();
+    @JsonProperty("error") private String error;
 
     @JsonCreator
     public Rows(@JsonProperty("cpf")String cpf,

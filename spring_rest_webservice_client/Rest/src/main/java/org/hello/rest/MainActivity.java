@@ -80,9 +80,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, Response> {
+    private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
         @Override
-        protected Response doInBackground(Void... params) {
+        protected ResponseJson doInBackground(Void... params) {
             try {
                 final String url = "https://api.dexi.io/runs/55b0593d-c2c8-4e6d-9411-d8b1b84063bb/execute/inputs/wait";
                 MyRestTemplate restTemplate = new MyRestTemplate();
@@ -100,7 +100,7 @@ public class MainActivity extends ActionBarActivity {
 
                 HttpEntity<Request> requestEntity = new HttpEntity<>(request, requestHeaders);
 
-                ResponseEntity<Response> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, Response.class);
+                ResponseEntity<ResponseJson> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, ResponseJson.class);
                 //Response response = restTemplate.postForObject(url,request,Response,);
 
                 return responseEntity.getBody();
@@ -128,11 +128,11 @@ public class MainActivity extends ActionBarActivity {
 
 
         @Override
-        protected void onPostExecute(Response response) {
+        protected void onPostExecute(ResponseJson response) {
             TextView greetingIdText = (TextView) findViewById(R.id.id_value);
             TextView greetingContentText = (TextView) findViewById(R.id.content_value);
             greetingIdText.setText("Teste");
-            greetingContentText.setText(response.getHeaders().get(1));
+            greetingContentText.setText(response.getRows()[0][6].toString());
         }
 
     }

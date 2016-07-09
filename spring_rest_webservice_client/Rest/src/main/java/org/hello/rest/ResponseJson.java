@@ -5,13 +5,13 @@ package org.hello.rest;
  */
 
 public class ResponseJson {
-    private java.lang.String[][] rows;
+    private java.lang.Object[][] rows;
 
-    public void setRows(java.lang.String[][] rows) {
+    public void setRows(java.lang.Object[][] rows) {
         this.rows = rows;
     }
 
-    public java.lang.String[][] getRows() {
+    public java.lang.Object[][] getRows() {
         return rows;
     }
 
