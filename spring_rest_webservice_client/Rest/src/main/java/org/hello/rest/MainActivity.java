@@ -12,6 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
@@ -73,15 +80,30 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, Greeting> {
+    private class HttpRequestTask extends AsyncTask<Void, Void, String> {
         @Override
-        protected Greeting doInBackground(Void... params) {
+        protected String doInBackground(Void... params) {
             try {
-                final String url = "http://rest-service.guides.spring.io/greeting";
-                RestTemplate restTemplate = new RestTemplate();
+                final String url = "https://api.dexi.io/runs/55b0593d-c2c8-4e6d-9411-d8b1b84063bb/execute/inputs/wait";
+                MyRestTemplate restTemplate = new MyRestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                Greeting greeting = restTemplate.getForObject(url, Greeting.class);
-                return greeting;
+
+                Request request=new Request("64302440325","Tonohotel0830","GRU","BSB","05/12/2016","06/12/2016");
+
+                // Set the Content-Type header
+                HttpHeaders requestHeaders = new HttpHeaders();
+                requestHeaders.setContentType(new MediaType("application","json"));
+                requestHeaders.add("X-CloudScrape-Access","0fe528798ed3dac103e836e192742f83");
+                requestHeaders.add("X-CloudScrape-Account","cd84c702-2069-4510-bd44-03d90a4b767d");
+                requestHeaders.add("Accept","application/json");
+                requestHeaders.add("Accept-Encoding","gzip");
+
+                HttpEntity<Request> requestEntity = new HttpEntity<>(request, requestHeaders);
+
+                ResponseEntity<ResponseJson> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, ResponseJson.class);
+                //Response response = restTemplate.postForObject(url,request,Response,);
+
+                return responseEntity.getBody().getHeaders()[1];
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -89,12 +111,28 @@ public class MainActivity extends ActionBarActivity {
             return null;
         }
 
+
+        public class MyRestTemplate extends RestTemplate {
+            public MyRestTemplate() {
+                if (getRequestFactory() instanceof SimpleClientHttpRequestFactory) {
+                    Log.d("HTTP", "HttpUrlConnection is used");
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(100 * 1000);
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setReadTimeout(100 * 1000);
+                } else if (getRequestFactory() instanceof HttpComponentsClientHttpRequestFactory) {
+                    Log.d("HTTP", "HttpClient is used");
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setReadTimeout(100 * 1000);
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(100 * 1000);
+                }
+            }
+        }
+
+
         @Override
-        protected void onPostExecute(Greeting greeting) {
+        protected void onPostExecute(String response) {
             TextView greetingIdText = (TextView) findViewById(R.id.id_value);
             TextView greetingContentText = (TextView) findViewById(R.id.content_value);
-            greetingIdText.setText(greeting.getId());
-            greetingContentText.setText(greeting.getContent());
+            greetingIdText.setText("Teste");
+            greetingContentText.setText(response);
         }
 
     }
