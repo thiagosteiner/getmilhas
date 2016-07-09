@@ -29,4 +29,4 @@ voosIda.each( function(){
 		voo.push(getDados($(this)));
 	}
 } );
-voosIda.shift();
+viagens.shift();
