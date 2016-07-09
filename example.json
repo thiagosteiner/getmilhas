@@ -1,0 +1,2170 @@
+{
+  "headers": [
+    "cpf",
+    "senha",
+    "origem",
+    "destino",
+    "data_partida",
+    "data_retorno",
+    "lista_idas",
+    "lista_voltas",
+    "error"
+  ],
+  "rows": [
+    [
+      "64302440325",
+      "Tonohotel0830",
+      "GRU",
+      "BSB",
+      "05/12/2016",
+      "06/12/2016",
+      [
+        [],
+        [
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3562"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 14:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:50:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3582"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 16:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:20:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3579"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:30:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3344"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Mon Dec 05 11:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 10:15:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3856"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CWB",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 16:23:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:20:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3331"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CWB",
+            "chegada": "Mon Dec 05 19:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:22:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3533"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 19:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 18:05:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3326"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Mon Dec 05 22:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 20:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3854"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3494"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GIG",
+            "chegada": "Mon Dec 05 16:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3814"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "VIX",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:23:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:00:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3362"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "VIX",
+            "chegada": "Mon Dec 05 13:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 11:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ4705"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FLN",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 16:57:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3185"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "FLN",
+            "chegada": "Mon Dec 05 20:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:46:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3874"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GYN",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:15:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3466"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GYN",
+            "chegada": "Mon Dec 05 12:45:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:00:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3183"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 16:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:15:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3894"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SSA",
+            "chegada": "Mon Dec 05 20:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:17:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3283"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:12:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:55:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3896"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SSA",
+            "chegada": "Mon Dec 05 12:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:57:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3437"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 14:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:55:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3360"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Mon Dec 05 19:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3844"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3494"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 16:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3148"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "MCZ",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 14:37:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:50:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3636"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "MCZ",
+            "chegada": "Mon Dec 05 19:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:42:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3577"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "THE",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 02:18:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 00:15:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3565"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "THE",
+            "chegada": "Mon Dec 05 06:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 03:28:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3243"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "REC",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 11:30:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3302"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "REC",
+            "chegada": "Mon Dec 05 17:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:15:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3067"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3570"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GIG",
+            "chegada": "Mon Dec 05 16:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3814"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 08:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3686"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 14:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:55:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3026"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "NAT",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:29:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 11:15:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3707"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "NAT",
+            "chegada": "Mon Dec 05 18:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:10:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3313"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3494"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 19:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:50:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3028"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "IGU",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:56:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:15:00 GMT 2016",
+            "preco": [
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3169"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "IGU",
+            "chegada": "Mon Dec 05 17:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:46:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3691"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:37:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:10:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3804"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SSA",
+            "chegada": "Mon Dec 05 20:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:17:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3283"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "BEL",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:32:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 10:55:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3554"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "BEL",
+            "chegada": "Mon Dec 05 19:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:22:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3327"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SLZ",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:04:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 10:40:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3320"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SLZ",
+            "chegada": "Mon Dec 05 18:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:14:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3553"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 15:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:05:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3530"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 22:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 20:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3030"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3570"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 17:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:45:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3826"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 08:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3686"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GIG",
+            "chegada": "Mon Dec 05 16:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3814"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SLZ",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:04:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 10:40:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3320"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SLZ",
+            "chegada": "Mon Dec 05 19:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:52:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3419"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "REC",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 11:03:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:05:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3504"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "REC",
+            "chegada": "Mon Dec 05 17:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:15:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3067"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 14:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:55:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3360"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Mon Dec 05 22:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 20:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3854"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3570"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 16:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3148"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 11:42:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:20:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3574"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "FOR",
+            "chegada": "Mon Dec 05 18:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:12:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3553"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 11:42:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:20:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3574"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "FOR",
+            "chegada": "Mon Dec 05 19:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:24:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3889"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 11:42:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:20:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3574"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "FOR",
+            "chegada": "Mon Dec 05 19:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 14:43:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3841"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 08:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3686"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 17:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:45:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3826"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 23:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:50:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3443"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Tue Dec 06 09:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:05:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3022"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 13:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 12:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3494"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 22:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 20:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3030"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "GRU",
+            "chegada": "Tue Dec 06 00:27:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:05:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3324"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 08:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 04:40:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3061"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "MCZ",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:45:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3476"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "MCZ",
+            "chegada": "Mon Dec 05 19:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:42:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3577"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "POA",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:32:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:55:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3299"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "POA",
+            "chegada": "Mon Dec 05 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 15:57:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3231"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:30:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3344"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Mon Dec 05 19:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3844"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 23:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:50:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3443"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 09:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3444"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GYN",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 09:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 08:15:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3466"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "GYN",
+            "chegada": "Mon Dec 05 18:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 18:13:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3338"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 23:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:10:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3398"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SSA",
+            "chegada": "Tue Dec 06 08:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 05:55:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3517"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CWB",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 23:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:35:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3335"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CWB",
+            "chegada": "Tue Dec 06 09:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:06:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3150"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 10:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 09:10:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3570"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 19:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 17:50:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3028"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 23:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 22:40:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3442"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "CNF",
+            "chegada": "Tue Dec 06 09:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 08:00:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3496"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "GRU",
+            "chegada": "Mon Dec 05 08:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 07:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3686"
+          },
+          {
+            "aeroChegada": "BSB",
+            "aeroPartida": "SDU",
+            "chegada": "Mon Dec 05 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Mon Dec 05 16:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3148"
+          }
+        ]
+      ],
+      [
+        [],
+        [
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:45:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:00:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3578"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 19:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 17:50:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3991"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 22:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:45:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3575"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "VIX",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:47:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:05:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.000",
+              "9.000"
+            ],
+            "voo": "JJ4704"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "VIX",
+            "chegada": "Tue Dec 06 14:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 12:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3377"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GYN",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 17:41:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:50:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3047"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GYN",
+            "chegada": "Tue Dec 06 20:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 19:13:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3467"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FLN",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:48:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:30:00 GMT 2016",
+            "preco": [
+              "8.000",
+              "9.000"
+            ],
+            "voo": "JJ3875"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FLN",
+            "chegada": "Tue Dec 06 15:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:42:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3184"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 14:59:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:05:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3560"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SSA",
+            "chegada": "Tue Dec 06 20:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:27:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3989"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3025"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:50:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3495"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3827"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 20:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 18:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3571"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "POA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:28:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:50:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3057"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "POA",
+            "chegada": "Tue Dec 06 16:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:34:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3160"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:00:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3857"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "CNF",
+            "chegada": "Tue Dec 06 20:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 19:10:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3341"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3025"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 15:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3547"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:55:00 GMT 2016",
+            "preco": [
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3784"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:33:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3563"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 17:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 15:30:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3027"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 22:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 21:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3669"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SLZ",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:43:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 11:15:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3182"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SLZ",
+            "chegada": "Tue Dec 06 18:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:07:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3321"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "BPS",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 09:55:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:05:00 GMT 2016",
+            "preco": [
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3284"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "BPS",
+            "chegada": "Tue Dec 06 16:45:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:40:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3607"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:27:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:45:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3066"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:53:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3879"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:21:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:25:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3561"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SSA",
+            "chegada": "Tue Dec 06 18:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:39:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3805"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 09:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:55:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3023"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:50:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3495"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SLZ",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:46:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:15:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3552"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SLZ",
+            "chegada": "Tue Dec 06 18:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:07:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3321"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:38:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:55:00 GMT 2016",
+            "preco": [
+              "14.000"
+            ],
+            "voo": "JJ3840"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 18:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:53:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3879"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "BEL",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:04:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3174"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "BEL",
+            "chegada": "Tue Dec 06 19:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3555"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 09:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:30:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3147"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:50:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3495"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "JPA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:56:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:15:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3280"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "JPA",
+            "chegada": "Tue Dec 06 18:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:27:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3357"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CNF",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 13:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 12:05:00 GMT 2016",
+            "preco": [
+              "11.000"
+            ],
+            "voo": "JJ3845"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "CNF",
+            "chegada": "Tue Dec 06 20:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 19:10:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3341"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 09:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:55:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3023"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 15:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3547"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CWB",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:35:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3967"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "CWB",
+            "chegada": "Tue Dec 06 19:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 18:15:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3336"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "MAO",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 22:44:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 21:35:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3542"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "MAO",
+            "chegada": "Wed Dec 07 06:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 00:44:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3751"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 09:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 07:30:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3147"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 16:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 15:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3547"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:35:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3827"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 22:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 21:30:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3669"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 13:55:00 GMT 2016",
+            "preco": [
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3784"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 23:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 18:49:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3391"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "MCZ",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:23:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 11:05:00 GMT 2016",
+            "preco": [
+              "10.000"
+            ],
+            "voo": "JJ3576"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "MCZ",
+            "chegada": "Tue Dec 06 20:35:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3637"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "GIG",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 22:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3445"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Wed Dec 07 06:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 05:05:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3440"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CWB",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 23:48:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 21:45:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3151"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "CWB",
+            "chegada": "Wed Dec 07 07:15:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 06:08:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3334"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:21:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:25:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3561"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SSA",
+            "chegada": "Tue Dec 06 20:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:27:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3989"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SSA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 14:59:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 14:05:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3560"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "SSA",
+            "chegada": "Tue Dec 06 23:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:15:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3815"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 22:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:20:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3531"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Wed Dec 07 06:10:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 05:05:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3440"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FLN",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:48:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:30:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3875"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FLN",
+            "chegada": "Tue Dec 06 20:45:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 19:25:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3414"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 14:42:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:50:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3860"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:33:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3563"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "REC",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:20:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:50:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3860"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "REC",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:37:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3505"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "SDU",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:25:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:40:00 GMT 2016",
+            "preco": [
+              "15.000"
+            ],
+            "voo": "JJ3025"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "GIG",
+            "chegada": "Tue Dec 06 20:00:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 18:35:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3571"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:27:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:45:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3066"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:33:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3563"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "NAT",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 21:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:10:00 GMT 2016",
+            "preco": [
+              "9.000",
+              "10.000"
+            ],
+            "voo": "JJ3342"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "NAT",
+            "chegada": "Wed Dec 07 06:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 02:10:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3351"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "MAO",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:27:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:35:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3608"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "MAO",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 15:07:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3409"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "VIX",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 11:47:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:05:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.000",
+              "9.000"
+            ],
+            "voo": "JJ4704"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "VIX",
+            "chegada": "Tue Dec 06 20:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 19:02:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3375"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "THE",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 21:24:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:15:00 GMT 2016",
+            "preco": [
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3822"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "THE",
+            "chegada": "Wed Dec 07 06:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Wed Dec 07 02:45:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3566"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "FOR",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 15:31:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:15:00 GMT 2016",
+            "preco": [
+              "13.000"
+            ],
+            "voo": "JJ3552"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "FOR",
+            "chegada": "Tue Dec 06 21:05:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 16:33:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3563"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "CWB",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:40:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 10:35:00 GMT 2016",
+            "preco": [
+              "6.000",
+              "8.500",
+              "10.000"
+            ],
+            "voo": "JJ3967"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "CWB",
+            "chegada": "Tue Dec 06 21:30:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 20:18:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3332"
+          }
+        ],
+        [
+          {
+            "aeroChegada": "POA",
+            "aeroPartida": "BSB",
+            "chegada": "Tue Dec 06 12:28:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 09:50:00 GMT 2016",
+            "preco": [
+              "14.000"
+            ],
+            "voo": "JJ3057"
+          },
+          {
+            "aeroChegada": "GRU",
+            "aeroPartida": "POA",
+            "chegada": "Tue Dec 06 20:50:00 GMT 2016",
+            "companhia": "LATAM Airlines Brasil",
+            "partida": "Tue Dec 06 18:59:00 GMT 2016",
+            "preco": [],
+            "voo": "JJ3296"
+          }
+        ]
+      ],
+      null
+    ]
+  ]
+}
