@@ -1,9 +1,10 @@
 package org.hello.rest;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -22,7 +24,8 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,14 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+
+
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        new HttpRequestTask().execute();
+       // new HttpRequestTask().execute();
     }
 
     @Override
@@ -57,11 +62,14 @@ public class MainActivity extends ActionBarActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
-            new HttpRequestTask().execute();
+
+            new HttpRequestTask("GRU","BSB","02/12/2016","06/12/2016").execute();
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
     /**
      * A placeholder fragment containing a simple view.
@@ -79,8 +87,62 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
+    public void irparabusca(View v) {
+        Intent it = new Intent(this, actBusca.class);
+        it.putExtra("edtOrigem", "Teste");
+        startActivity(it);
+    }
+
+
 
     private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
+        String origem;
+        String destino;
+        String dataida;
+        String datavolta;
+
+        public AsyncResponse delegate = null;
+
+        HttpRequestTask(String origem, String destino, String dataida, String datavolta) {
+            this.origem = origem;
+            this.destino = destino;
+            this.dataida = dataida;
+            this.datavolta = datavolta;
+        }
+
+
+        public void setOrigem(String origem) {
+            this.origem = origem;
+        }
+
+        public String getOrigem() {
+            return this.origem;
+        }
+
+        public void setDestino(String destino) {
+            this.destino = destino;
+        }
+
+        public String getDestino() {
+            return this.destino;
+        }
+
+        public void setDataIda(String dataida) {
+            this.dataida = dataida;
+        }
+
+        public String getDataIda() {
+            return this.dataida;
+        }
+
+        public void setDataVolta(String datavolta) {
+            this.datavolta = datavolta;
+        }
+
+        public String getDataVolta() {
+            return this.datavolta;
+        }
+
         @Override
         protected ResponseJson doInBackground(Void... params) {
             try {
@@ -88,15 +150,15 @@ public class MainActivity extends ActionBarActivity {
                 MyRestTemplate restTemplate = new MyRestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
-                Request request=new Request("64302440325","Tonohotel0830","GRU","BSB","05/12/2016","06/12/2016");
+                Request request = new Request("64302440325", "Tonohotel0830", origem, destino, dataida, datavolta);
 
                 // Set the Content-Type header
                 HttpHeaders requestHeaders = new HttpHeaders();
-                requestHeaders.setContentType(new MediaType("application","json"));
-                requestHeaders.add("X-CloudScrape-Access","0fe528798ed3dac103e836e192742f83");
-                requestHeaders.add("X-CloudScrape-Account","cd84c702-2069-4510-bd44-03d90a4b767d");
-                requestHeaders.add("Accept","application/json");
-                requestHeaders.add("Accept-Encoding","gzip");
+                requestHeaders.setContentType(new MediaType("application", "json"));
+                requestHeaders.add("X-CloudScrape-Access", "0fe528798ed3dac103e836e192742f83");
+                requestHeaders.add("X-CloudScrape-Account", "cd84c702-2069-4510-bd44-03d90a4b767d");
+                requestHeaders.add("Accept", "application/json");
+                requestHeaders.add("Accept-Encoding", "gzip");
 
                 HttpEntity<Request> requestEntity = new HttpEntity<>(request, requestHeaders);
 
@@ -116,25 +178,39 @@ public class MainActivity extends ActionBarActivity {
             public MyRestTemplate() {
                 if (getRequestFactory() instanceof SimpleClientHttpRequestFactory) {
                     Log.d("HTTP", "HttpUrlConnection is used");
-                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(100 * 1000);
-                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setReadTimeout(100 * 1000);
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
                 } else if (getRequestFactory() instanceof HttpComponentsClientHttpRequestFactory) {
                     Log.d("HTTP", "HttpClient is used");
-                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setReadTimeout(100 * 1000);
-                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(100 * 1000);
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
                 }
             }
         }
 
 
-        @Override
-        protected void onPostExecute(ResponseJson response) {
+          @Override
+          protected void onPostExecute(ResponseJson response) {
             TextView greetingIdText = (TextView) findViewById(R.id.id_value);
-            TextView greetingContentText = (TextView) findViewById(R.id.content_value);
-            greetingIdText.setText("Teste");
-            greetingContentText.setText(response.getRows()[0][6].toString());
-        }
+           TextView greetingContentText = (TextView) findViewById(R.id.content_value);
+             greetingIdText.setText("Teste");
+              try {
+             greetingContentText.setText(response.getRows()[0][6].toString());
+              } catch(Exception e) {
+                  Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();}
+
+
+          }
+
+
 
     }
 
+
+
+
+
+
+
 }
+
