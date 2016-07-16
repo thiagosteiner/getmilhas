@@ -1,11 +1,10 @@
 package org.hello.rest;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -31,7 +30,10 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 
 import java.lang.ref.WeakReference;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class  actBusca extends AppCompatActivity {
@@ -87,8 +89,18 @@ public class  actBusca extends AppCompatActivity {
         Spinner spnOrigem = (Spinner) findViewById(R.id.spnOrigem);
         String itemSelecionadospnOrigem = spnOrigem.getSelectedItem().toString();
         String itemSelecionadospnDestino = spnDestino.getSelectedItem().toString();
+        Date dataida = new Date();
+        Date datavolta = new Date();
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            dataida = (Date) df.parse(DataIda.getText().toString());
+            datavolta = (Date) df.parse(DataVolta.getText().toString());
+        }
+        catch (Exception e){
+            Log.e("DATE", e.getMessage(), e);
+        }
 
-        new HttpRequestTask(itemSelecionadospnOrigem,itemSelecionadospnDestino,DataIda.getText().toString(),DataVolta.getText().toString(),activity).execute();
+        new HttpRequestTask(itemSelecionadospnOrigem, itemSelecionadospnDestino, dataida, datavolta, activity).execute();
 
     }
 
@@ -124,17 +136,17 @@ public class  actBusca extends AppCompatActivity {
         }
     }
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
+    private class HttpRequestTask extends AsyncTask<Void, Void, TravelResponse> {
         WeakReference<Activity> mActivityReference;
 
         String origem;
         String destino;
-        String dataida;
-        String datavolta;
+        Date dataida;
+        Date datavolta;
 
         public AsyncResponse delegate = null;
 
-        HttpRequestTask(String origem, String destino, String dataida, String datavolta,Activity activity) {
+        HttpRequestTask(String origem, String destino, Date dataida, Date datavolta, Activity activity) {
             this.origem = origem;
             this.destino = destino;
             this.dataida = dataida;
@@ -159,45 +171,43 @@ public class  actBusca extends AppCompatActivity {
             return this.destino;
         }
 
-        public void setDataIda(String dataida) {
+        public void setDataIda(Date dataida) {
             this.dataida = dataida;
         }
 
-        public String getDataIda() {
+        public Date getDataIda() {
             return this.dataida;
         }
 
-        public void setDataVolta(String datavolta) {
+        public void setDataVolta(Date datavolta) {
             this.datavolta = datavolta;
         }
 
-        public String getDataVolta() {
+        public Date getDataVolta() {
             return this.datavolta;
         }
 
         @Override
-        protected ResponseJson doInBackground(Void... params) {
+        protected TravelResponse doInBackground(Void... params) {
             try {
-                final String url = "https://api.dexi.io/runs/55b0593d-c2c8-4e6d-9411-d8b1b84063bb/execute/inputs/wait";
+                final String url = "https://noodle-thiagosteiner.c9users.io:8081";
                 MyRestTemplate restTemplate = new MyRestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
-                Request request = new Request("64302440325", "Tonohotel0830", origem, destino, dataida, datavolta);
+                TravelRequest request = new TravelRequest(dataida, datavolta, origem, destino);
 
                 // Set the Content-Type header
                 HttpHeaders requestHeaders = new HttpHeaders();
                 requestHeaders.setContentType(new MediaType("application", "json"));
-                requestHeaders.add("X-CloudScrape-Access", "0fe528798ed3dac103e836e192742f83");
-                requestHeaders.add("X-CloudScrape-Account", "cd84c702-2069-4510-bd44-03d90a4b767d");
-                requestHeaders.add("Accept", "application/json");
-                requestHeaders.add("Accept-Encoding", "gzip");
+                //requestHeaders.add("Accept", "application/json");
+                requestHeaders.add("Content-Type", "application/json");
 
-                HttpEntity<Request> requestEntity = new HttpEntity<>(request, requestHeaders);
+                HttpEntity<TravelRequest> requestEntity = new HttpEntity<>(request, requestHeaders);
 
-                ResponseEntity<ResponseJson> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, ResponseJson.class);
+                ResponseEntity<TravelResponse[]> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, TravelResponse[].class);
                 //Response response = restTemplate.postForObject(url,request,Response,);
-
-                return responseEntity.getBody();
+                Log.e("PASSOU", "passou");
+                return responseEntity.getBody()[0];
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -222,7 +232,7 @@ public class  actBusca extends AppCompatActivity {
 
 
         @Override
-        protected void onPostExecute(ResponseJson response) {
+        protected void onPostExecute(TravelResponse response) {
 
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = null;
@@ -235,8 +245,8 @@ public class  actBusca extends AppCompatActivity {
 
             Intent it = new Intent(getApplicationContext(), actLista.class);
             it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            it.putExtra("DataIda", this.getDataIda());
-            it.putExtra("DataVolta", this.getDataVolta());
+            it.putExtra("DataIda", this.getDataIda().toString());
+            it.putExtra("DataVolta", this.getDataVolta().toString());
             it.putExtra("Origem", this.getOrigem());
             it.putExtra("Destino", this.getDestino());
             it.putExtra("Json", json);
