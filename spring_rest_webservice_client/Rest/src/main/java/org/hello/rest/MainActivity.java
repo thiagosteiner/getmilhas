@@ -1,17 +1,17 @@
 package org.hello.rest;
 
 import android.content.Intent;
-import android.os.AsyncTask;
+//import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+//import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
+//import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+/*import android.widget.TextView;
 import android.widget.Toast;
 
 import org.springframework.http.HttpEntity;
@@ -23,7 +23,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
-
+*/
 public class MainActivity extends AppCompatActivity {
 
 
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
        // new HttpRequestTask().execute();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    //@Override
+    /*public boolean onCreateOptionsMenu(Menu menu) {
 
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_refresh) {
 
-            new HttpRequestTask("GRU","BSB","02/12/2016","06/12/2016").execute();
+            //new HttpRequestTask("GRU","BSB","02/12/2016","06/12/2016").execute();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
+    /*private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
         String origem;
         String destino;
         String dataida;
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
+    }*/
 
 
 

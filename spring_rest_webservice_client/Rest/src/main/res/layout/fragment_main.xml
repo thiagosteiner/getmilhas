@@ -15,36 +15,7 @@
         android:layout_height="wrap_content"
         android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/content_label"
-        android:text="@string/content_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/id_label"
-        android:layout_alignParentLeft="true"
-        android:visibility="visible" />
-
-    <TextView
-        android:id="@+id/id_value"
-        android:text="@string/id_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/id_label"
-        android:layout_marginLeft="50dp"
-        android:visibility="visible" />
-
-    <TextView
-        android:id="@+id/content_value"
-        android:text="@string/content_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/content_label"
-        android:layout_alignLeft="@+id/id_value"
-        android:visibility="visible" />
-
-     <ImageView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"

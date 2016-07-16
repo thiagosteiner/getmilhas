@@ -224,6 +224,8 @@ public class  actBusca extends AppCompatActivity {
         @Override
         protected void onPostExecute(ResponseJson response) {
 
+            setContentView(R.layout.espera);
+
             ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
             String json = null;
             try {
@@ -231,6 +233,7 @@ public class  actBusca extends AppCompatActivity {
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
+
 
 
             Intent it = new Intent(getApplicationContext(), actLista.class);

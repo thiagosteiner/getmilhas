@@ -2,10 +2,8 @@
 <resources>
 
     <string name="app_name">Rest</string>
-    <string name="id_label">The ID is</string>
-    <string name="id_value">[id]</string>
-    <string name="content_label">The Content is</string>
-    <string name="content_value">[content]</string>
+    <string name="id_label">Bem vindo!\n Clique no botão abaixo para iniciar a experiência de comprar passagens pelo melhor preço.</string>
     <string name="action_refresh">Refresh</string>
+    <string name="wait">Aguarde enquanto buscamos o seu vôo.</string>
 
 </resources>
