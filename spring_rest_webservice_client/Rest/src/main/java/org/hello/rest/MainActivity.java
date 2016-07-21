@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         String dataida;
         String datavolta;
 
-        public AsyncResponse delegate = null;
+
 
         HttpRequestTask(String origem, String destino, String dataida, String datavolta) {
             this.origem = origem;

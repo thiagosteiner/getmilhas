@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +19,11 @@ import android.widget.TextView;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
+import com.goebl.david.Webb;
+import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -136,7 +141,7 @@ public class  actBusca extends AppCompatActivity {
         }
     }
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, TravelResponse> {
+    private class HttpRequestTask extends AsyncTask<Void, Void, String> {
         WeakReference<Activity> mActivityReference;
 
         String origem;
@@ -144,7 +149,7 @@ public class  actBusca extends AppCompatActivity {
         Date dataida;
         Date datavolta;
 
-        public AsyncResponse delegate = null;
+
 
         HttpRequestTask(String origem, String destino, Date dataida, Date datavolta, Activity activity) {
             this.origem = origem;
@@ -188,26 +193,111 @@ public class  actBusca extends AppCompatActivity {
         }
 
         @Override
-        protected TravelResponse doInBackground(Void... params) {
+        protected String doInBackground(Void... params) {
             try {
                 final String url = "https://noodle-thiagosteiner.c9users.io:8081";
-                MyRestTemplate restTemplate = new MyRestTemplate();
-                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
+
 
                 TravelRequest request = new TravelRequest(dataida, datavolta, origem, destino);
 
-                // Set the Content-Type header
-                HttpHeaders requestHeaders = new HttpHeaders();
-                requestHeaders.setContentType(new MediaType("application", "json"));
-                //requestHeaders.add("Accept", "application/json");
-                requestHeaders.add("Content-Type", "application/json");
+                String json="{\n" +
+                        "    \"url\": "+"\""+request.getUrl()+"\""+ ",\n" +
+                        "    \"type\": \"html\",\n" +
+                        "    \"map\": {\n" +
+                        "        \"voo_ida_hora_saida\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-1 strong\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "        \"voo_ida_aeroporto_origem\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-1 span\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "        \"voo_ida_hora_chegada\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-2 strong\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_aeroporto_destino\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-2 span\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_numero\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-3\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_duracao\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-4\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_preco_1\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-5\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_preco_2\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-6\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_ida_preco_3\": {\n" +
+                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-7\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "        \"voo_volta_hora_saida\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-1 strong\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "        \"voo_volta_aeroporto_origem\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-1 span\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "        \"voo_volta_hora_chegada\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-2 strong\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_aeroporto_destino\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-2 span\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_numero\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-3\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_duracao\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-4\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_preco_1\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-5\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_preco_2\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-6\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        },\n" +
+                        "         \"voo_volta_preco_3\": {\n" +
+                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-7\",\n" +
+                        "            \"extract\": \"text\"\n" +
+                        "        }\n" +
+                        "        \n" +
+                        "    }\n" +
+                        "}";
 
-                HttpEntity<TravelRequest> requestEntity = new HttpEntity<>(request, requestHeaders);
 
-                ResponseEntity<TravelResponse[]> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, TravelResponse[].class);
-                //Response response = restTemplate.postForObject(url,request,Response,);
+
+                JSONObject msg= new JSONObject(json);  //passed in as a parameter to this method
+
+
+                // we use http://hgoebl.github.io/DavidWebb/
+                Webb webb = Webb.create();
+                JSONArray result = webb.post(url)
+                        .useCaches(false)
+                        .body(msg)
+                        .ensureSuccess()
+                        .asJsonArray()
+                        .getBody();
+
+
                 Log.e("PASSOU", "passou");
-                return responseEntity.getBody()[0];
+
+                return result.toString();
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -216,31 +306,8 @@ public class  actBusca extends AppCompatActivity {
         }
 
 
-        public class MyRestTemplate extends RestTemplate {
-            public MyRestTemplate() {
-                if (getRequestFactory() instanceof SimpleClientHttpRequestFactory) {
-                    Log.d("HTTP", "HttpUrlConnection is used");
-                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
-                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
-                } else if (getRequestFactory() instanceof HttpComponentsClientHttpRequestFactory) {
-                    Log.d("HTTP", "HttpClient is used");
-                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
-                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
-                }
-            }
-        }
-
-
         @Override
-        protected void onPostExecute(TravelResponse response) {
-
-            ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-            String json = null;
-            try {
-                json = ow.writeValueAsString(response);
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-            }
+        protected void onPostExecute(String json) {
 
 
             Intent it = new Intent(getApplicationContext(), actLista.class);

@@ -16,15 +16,11 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class actLista extends AppCompatActivity {
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,32 +36,83 @@ public class actLista extends AppCompatActivity {
         final String destino = it.getStringExtra("Destino");
         String strjson = it.getStringExtra("Json");
 
-        TextView lblVoos = (TextView ) findViewById(R.id.lblVoos);
-
-        lblVoos.setText(strjson);
-
 
         ObjectMapper mapper= new ObjectMapper();
-        ResponseJson response=null;
+        TravelResponse[] response=null;
         try {
-            response = mapper.readValue(strjson, ResponseJson.class);
+            response = mapper.readValue(strjson, TravelResponse[].class);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-
-//        String viagens_ida_json="{viagens_ida:"+response.getRows()[0][6]+"}";
-//        try {
-//            Viagem[] lista_viagens=mapper.readValue(viagens_ida_json,Viagem[].class);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-
         final ArrayList<String> list_print = new ArrayList<>();
-        list_print.add(strjson);
-        ///list_print.add(response.getRows()[0][7].toString());
+        int contador=0;
+
+        for (int i=0;i< (response[0].getResults().getVooIdaHoraSaida().size());i++) {
+
+            if (Objects.equals(response[0].getResults().getVooIdaAeroportoOrigem().get(i), origem)) {
+                list_print.add("Ida:"+
+                                response[0].getResults().getVooIdaHoraSaida().get(i) + " " +
+                                response[0].getResults().getVooIdaAeroportoOrigem().get(i) + " " +
+                                response[0].getResults().getVooIdaHoraChegada().get(i) + " " +
+                                response[0].getResults().getVooIdaAeroportoDestino().get(i) + " " +
+                                response[0].getResults().getVooIdaDuracao().get(i) + " " +
+                                response[0].getResults().getVooIdaNumero().get(i) + " "+
+                                response[0].getResults().getVooIdaPreco1().get(contador) + " "+
+                                response[0].getResults().getVooIdaPreco2().get(contador) + " "+
+                                response[0].getResults().getVooIdaPreco3().get(contador)
+                );
+                contador=contador+1;
+
+
+
+            } else {
+
+
+                list_print.add("Ida:"+
+                                response[0].getResults().getVooIdaHoraSaida().get(i) + " " +
+                                response[0].getResults().getVooIdaAeroportoOrigem().get(i) + " " +
+                                response[0].getResults().getVooIdaHoraChegada().get(i) + " " +
+                                response[0].getResults().getVooIdaAeroportoDestino().get(i) + " " +
+                                response[0].getResults().getVooIdaDuracao().get(i) + " " +
+                                response[0].getResults().getVooIdaNumero().get(i) + " "
+                );
+            }
+        }
+
+        contador=0;
+
+        for (int i=0;i< (response[0].getResults().getVooVoltaHoraSaida().size());i++) {
+
+            if (Objects.equals(response[0].getResults().getVooVoltaAeroportoOrigem().get(i), destino)) {
+                list_print.add("Volta:"+
+                        response[0].getResults().getVooVoltaHoraSaida().get(i) + " " +
+                        response[0].getResults().getVooVoltaAeroportoOrigem().get(i) + " " +
+                        response[0].getResults().getVooVoltaHoraChegada().get(i) + " " +
+                        response[0].getResults().getVooVoltaAeroportoDestino().get(i) + " " +
+                        response[0].getResults().getVooVoltaDuracao().get(i) + " " +
+                        response[0].getResults().getVooVoltaNumero().get(i) + " "+
+                        response[0].getResults().getVooVoltaPreco1().get(contador) + " "+
+                        response[0].getResults().getVooVoltaPreco2().get(contador) + " "+
+                        response[0].getResults().getVooVoltaPreco3().get(contador)
+                );
+                contador=contador+1;
+
+
+
+            } else {
+
+
+                list_print.add("Volta:"+
+                        response[0].getResults().getVooVoltaHoraSaida().get(i) + " " +
+                        response[0].getResults().getVooVoltaAeroportoOrigem().get(i) + " " +
+                        response[0].getResults().getVooVoltaHoraChegada().get(i) + " " +
+                        response[0].getResults().getVooVoltaAeroportoDestino().get(i) + " " +
+                        response[0].getResults().getVooVoltaDuracao().get(i) + " " +
+                        response[0].getResults().getVooVoltaNumero().get(i) + " "
+                );
+            }
+        }
 
 
 
@@ -75,24 +122,13 @@ public class actLista extends AppCompatActivity {
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "Voo: "+list_print.get(position).toString() + " " + dataIda + " " + dataVolta + " " + origem + " " + destino, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),list_print.get(position).toString(), Toast.LENGTH_SHORT).show();
 
             }
         });
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-
-
 
     }
 
-//    private ArrayList<String> preencherDados() {
-//        ArrayList<String> dados = new ArrayList<String>();
-//        dados.add("JJ3110");
-//        dados.add("JJ3111");
-//        dados.add("JJ3112");
-//        return dados;
-//    }
 
 
 }
