@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/steiner/Downloads/getmilhas/spring_rest_webservice_client/Rest/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1f154e5334ed50dc3395270c9ddb055d354db32f">
+        <dex dex="/home/steiner/Downloads/getmilhas/spring_rest_webservice_client/Rest/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a165c232420b2053c48383c9a31576bdc3fed6fd/classes.dex" />
+    </item>
+
+</items>

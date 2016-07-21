@@ -28,8 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".actLista" />
-        <activity android:name=".actBusca"></activity>
+        <activity android:name=".actLista"/>
+        <activity android:name=".actBusca"/>
+        <activity android:name=".actBusca_2"/>
+        <activity android:name=".actLista_2"></activity>
     </application>
 
 </manifest>

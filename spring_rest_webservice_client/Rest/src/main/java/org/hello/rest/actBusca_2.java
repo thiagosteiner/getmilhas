@@ -107,52 +107,36 @@ public class  actBusca_2 extends AppCompatActivity {
         Spinner spnOrigem = (Spinner) findViewById(R.id.spnOrigem);
         String itemSelecionadospnOrigem = spnOrigem.getSelectedItem().toString();
         String itemSelecionadospnDestino = spnDestino.getSelectedItem().toString();
-        Date dataida = new Date();
-        Date datavolta = new Date();
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            dataida = (Date) df.parse(DataIda.getText().toString());
-            datavolta = (Date) df.parse(DataVolta.getText().toString());
-        }
-        catch (Exception e){
-            Log.e("DATE", e.getMessage(), e);
-        }
-
-        new HttpRequestTask(itemSelecionadospnOrigem, itemSelecionadospnDestino, dataida, datavolta, activity).execute();
-
-    }
-
-
-    public void onCheckboxClicked(View view) {
-        // Is the view now checked?
-        boolean checked = ((CheckBox) view).isChecked();
-
-        Spinner spnDestino = (Spinner) findViewById(R.id.spnDestino);
-        TextView lblDestino = (TextView) findViewById(R.id.lblDestino);
-
-        Spinner spnOrigem = (Spinner) findViewById(R.id.spnOrigem);
-        Button btnBuscar = (Button) findViewById(R.id.btnBuscar);
-
-        Bundle bludle = getIntent().getExtras();
+//        Date dataida = new Date();
+//        Date datavolta = new Date();
+//        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+//        try {
+//            dataida = (Date) df.parse(DataIda.getText().toString());
+//            datavolta = (Date) df.parse(DataVolta.getText().toString());
+//        }
+//        catch (Exception e){
+//            Log.e("DATE", e.getMessage(), e);
+//        }
+        String dataIda=DataIda.getText().toString();
+        String dataVolta=DataVolta.getText().toString();
+        new HttpRequestTask(itemSelecionadospnOrigem, itemSelecionadospnDestino, dataIda, dataVolta).execute();
 
     }
 
-    private class HttpRequestTask extends AsyncTask<Void, Void, String> {
-        WeakReference<Activity> mActivityReference;
+    private class HttpRequestTask extends AsyncTask<Void, Void, ResponseJson> {
 
         String origem;
         String destino;
-        Date dataida;
-        Date datavolta;
+        String dataida;
+        String datavolta;
 
 
 
-        HttpRequestTask(String origem, String destino, Date dataida, Date datavolta, Activity activity) {
+        HttpRequestTask(String origem, String destino, String dataida, String datavolta) {
             this.origem = origem;
             this.destino = destino;
             this.dataida = dataida;
             this.datavolta = datavolta;
-            this.mActivityReference = new WeakReference<Activity>(activity);
         }
 
 
@@ -172,128 +156,45 @@ public class  actBusca_2 extends AppCompatActivity {
             return this.destino;
         }
 
-        public void setDataIda(Date dataida) {
+        public void setDataIda(String dataida) {
             this.dataida = dataida;
         }
 
-        public Date getDataIda() {
+        public String getDataIda() {
             return this.dataida;
         }
 
-        public void setDataVolta(Date datavolta) {
+        public void setDataVolta(String datavolta) {
             this.datavolta = datavolta;
         }
 
-        public Date getDataVolta() {
+        public String getDataVolta() {
             return this.datavolta;
         }
 
         @Override
-        protected String doInBackground(Void... params) {
+        protected ResponseJson doInBackground(Void... params) {
             try {
-                final String url = "https://noodle-thiagosteiner.c9users.io:8081";
+                final String url = "https://api.dexi.io/runs/55b0593d-c2c8-4e6d-9411-d8b1b84063bb/execute/inputs/wait";
+                MyRestTemplate restTemplate = new MyRestTemplate();
+                restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
+                Request request = new Request("64302440325", "Tonohotel0830", origem, destino, dataida, datavolta);
 
-                TravelRequest request = new TravelRequest(dataida, datavolta, origem, destino);
+                // Set the Content-Type header
+                HttpHeaders requestHeaders = new HttpHeaders();
+                requestHeaders.setContentType(new MediaType("application", "json"));
+                requestHeaders.add("X-CloudScrape-Access", "0fe528798ed3dac103e836e192742f83");
+                requestHeaders.add("X-CloudScrape-Account", "cd84c702-2069-4510-bd44-03d90a4b767d");
+                requestHeaders.add("Accept", "application/json");
+                requestHeaders.add("Accept-Encoding", "gzip");
 
-                String json="{\n" +
-                        "    \"url\": "+"\""+request.getUrl()+"\""+ ",\n" +
-                        "    \"type\": \"html\",\n" +
-                        "    \"map\": {\n" +
-                        "        \"voo_ida_hora_saida\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-1 strong\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "        \"voo_ida_aeroporto_origem\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-1 span\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "        \"voo_ida_hora_chegada\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-2 strong\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_aeroporto_destino\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-2 span\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_numero\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-3\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_duracao\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-4\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_preco_1\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-5\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_preco_2\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-6\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_ida_preco_3\": {\n" +
-                        "            \"selector\": \"#outbound_list_flight > tbody > tr>td.tbf-col-7\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "        \"voo_volta_hora_saida\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-1 strong\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "        \"voo_volta_aeroporto_origem\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-1 span\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "        \"voo_volta_hora_chegada\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-2 strong\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_aeroporto_destino\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-2 span\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_numero\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-3\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_duracao\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-4\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_preco_1\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-5\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_preco_2\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-6\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        },\n" +
-                        "         \"voo_volta_preco_3\": {\n" +
-                        "            \"selector\": \"#inbound_list_flight > tbody > tr>td.tbf-col-7\",\n" +
-                        "            \"extract\": \"text\"\n" +
-                        "        }\n" +
-                        "        \n" +
-                        "    }\n" +
-                        "}";
+                HttpEntity<Request> requestEntity = new HttpEntity<>(request, requestHeaders);
 
+                ResponseEntity<ResponseJson> responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, ResponseJson.class);
+                //Response response = restTemplate.postForObject(url,request,Response,);
 
-
-                JSONObject msg= new JSONObject(json);  //passed in as a parameter to this method
-
-
-                // we use http://hgoebl.github.io/DavidWebb/
-                Webb webb = Webb.create();
-                JSONArray result = webb.post(url)
-                        .useCaches(false)
-                        .body(msg)
-                        .ensureSuccess()
-                        .asJsonArray()
-                        .getBody();
-
-
-                Log.e("PASSOU", "passou");
-
-                return result.toString();
+                return responseEntity.getBody();
             } catch (Exception e) {
                 Log.e("MainActivity", e.getMessage(), e);
             }
@@ -302,22 +203,35 @@ public class  actBusca_2 extends AppCompatActivity {
         }
 
 
-        @Override
-        protected void onPostExecute(String json) {
-
-
-            Intent it = new Intent(getApplicationContext(), actLista.class);
-            it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            it.putExtra("DataIda", this.getDataIda().toString());
-            it.putExtra("DataVolta", this.getDataVolta().toString());
-            it.putExtra("Origem", this.getOrigem());
-            it.putExtra("Destino", this.getDestino());
-            it.putExtra("Json", json);
-
-            getApplicationContext().startActivity(it);
-
-
+        public class MyRestTemplate extends RestTemplate {
+            public MyRestTemplate() {
+                if (getRequestFactory() instanceof SimpleClientHttpRequestFactory) {
+                    Log.d("HTTP", "HttpUrlConnection is used");
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
+                    ((SimpleClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
+                } else if (getRequestFactory() instanceof HttpComponentsClientHttpRequestFactory) {
+                    Log.d("HTTP", "HttpClient is used");
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setReadTimeout(200 * 1000);
+                    ((HttpComponentsClientHttpRequestFactory) getRequestFactory()).setConnectTimeout(200 * 1000);
+                }
+            }
         }
 
+            @Override
+            protected void onPostExecute(ResponseJson response) {
+                Intent it = new Intent(getApplicationContext(), actLista_2.class);
+                it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                it.putExtra("Origem", this.getOrigem());
+                it.putExtra("Destino", this.getDestino());
+                it.putExtra("Json", response.getRows()[0][6].toString());
+                getApplicationContext().startActivity(it);
+            }
+
+
+
     }
+
+
+
+
 }
