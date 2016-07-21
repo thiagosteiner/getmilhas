@@ -57,7 +57,7 @@ public class actLista extends AppCompatActivity {
                                 response[0].getResults().getVooIdaHoraChegada().get(i) + " " +
                                 response[0].getResults().getVooIdaAeroportoDestino().get(i) + " " +
                                 response[0].getResults().getVooIdaDuracao().get(i) + " " +
-                                response[0].getResults().getVooIdaNumero().get(i) + " "+
+                                response[0].getResults().getVooIdaNumero().get(i) + "\nPreços "+
                                 response[0].getResults().getVooIdaPreco1().get(contador) + " "+
                                 response[0].getResults().getVooIdaPreco2().get(contador) + " "+
                                 response[0].getResults().getVooIdaPreco3().get(contador)
@@ -68,8 +68,7 @@ public class actLista extends AppCompatActivity {
 
             } else {
 
-
-                list_print.add("Ida:"+
+                list_print.add("Conexão:"+
                                 response[0].getResults().getVooIdaHoraSaida().get(i) + " " +
                                 response[0].getResults().getVooIdaAeroportoOrigem().get(i) + " " +
                                 response[0].getResults().getVooIdaHoraChegada().get(i) + " " +
@@ -91,7 +90,7 @@ public class actLista extends AppCompatActivity {
                         response[0].getResults().getVooVoltaHoraChegada().get(i) + " " +
                         response[0].getResults().getVooVoltaAeroportoDestino().get(i) + " " +
                         response[0].getResults().getVooVoltaDuracao().get(i) + " " +
-                        response[0].getResults().getVooVoltaNumero().get(i) + " "+
+                        response[0].getResults().getVooVoltaNumero().get(i) + "\nPreços:"+
                         response[0].getResults().getVooVoltaPreco1().get(contador) + " "+
                         response[0].getResults().getVooVoltaPreco2().get(contador) + " "+
                         response[0].getResults().getVooVoltaPreco3().get(contador)
@@ -103,7 +102,7 @@ public class actLista extends AppCompatActivity {
             } else {
 
 
-                list_print.add("Volta:"+
+                list_print.add("Conexão:"+
                         response[0].getResults().getVooVoltaHoraSaida().get(i) + " " +
                         response[0].getResults().getVooVoltaAeroportoOrigem().get(i) + " " +
                         response[0].getResults().getVooVoltaHoraChegada().get(i) + " " +

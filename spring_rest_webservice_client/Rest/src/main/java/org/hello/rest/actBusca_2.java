@@ -135,23 +135,6 @@ public class  actBusca_2 extends AppCompatActivity {
 
         Bundle bludle = getIntent().getExtras();
 
-
-        // Check which checkbox was clicked
-//        switch (view.getId()) {
-//            case R.id.chbSomenteIda:
-//                if (checked) {
-//                    spnDestino.setVisibility(View.INVISIBLE);
-//                    lblDestino.setVisibility(View.INVISIBLE);
-//                } else {
-//                    spnDestino.setVisibility(View.VISIBLE);
-//                    lblDestino.setVisibility(View.VISIBLE);
-//                }
-//                // Put some meat on the sandwich
-//                // else
-//                // Remove the meat
-//                break;
-//
-//        }
     }
 
     private class HttpRequestTask extends AsyncTask<Void, Void, String> {
