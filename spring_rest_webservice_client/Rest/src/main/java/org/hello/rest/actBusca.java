@@ -57,9 +57,7 @@ public class  actBusca extends AppCompatActivity {
         dados.add("BSB");
         dados.add("GIG");
         dados.add("VIX");
-        dados.add("FNL");
-        dados.add("SDU");
-        dados.add("FNL");
+        dados.add("GRU");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>
                 (this, android.R.layout.simple_spinner_item,dados);
@@ -67,7 +65,22 @@ public class  actBusca extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spnOrigem.setAdapter(adapter);
-        spnDestino.setAdapter(adapter);
+
+        List<String> dados_2 = new ArrayList<String>();
+
+        dados_2.add("GIG");
+        dados_2.add("VIX");
+        dados_2.add("GRU");
+        dados_2.add("BSB");
+
+        ArrayAdapter<String> adapter_2 = new ArrayAdapter<String>
+                (this, android.R.layout.simple_spinner_item,dados_2);
+        // Specify the layout to use when the list of choices appears
+        adapter_2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+
+        spnDestino.setAdapter(adapter_2);
     }
 
 
@@ -124,21 +137,21 @@ public class  actBusca extends AppCompatActivity {
 
 
         // Check which checkbox was clicked
-        switch (view.getId()) {
-            case R.id.chbSomenteIda:
-                if (checked) {
-                    spnDestino.setVisibility(View.INVISIBLE);
-                    lblDestino.setVisibility(View.INVISIBLE);
-                } else {
-                    spnDestino.setVisibility(View.VISIBLE);
-                    lblDestino.setVisibility(View.VISIBLE);
-                }
-                // Put some meat on the sandwich
-                // else
-                // Remove the meat
-                break;
-
-        }
+//        switch (view.getId()) {
+//            case R.id.chbSomenteIda:
+//                if (checked) {
+//                    spnDestino.setVisibility(View.INVISIBLE);
+//                    lblDestino.setVisibility(View.INVISIBLE);
+//                } else {
+//                    spnDestino.setVisibility(View.VISIBLE);
+//                    lblDestino.setVisibility(View.VISIBLE);
+//                }
+//                // Put some meat on the sandwich
+//                // else
+//                // Remove the meat
+//                break;
+//
+//        }
     }
 
     private class HttpRequestTask extends AsyncTask<Void, Void, String> {

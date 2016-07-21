@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/chbSomenteIda"
+        android:layout_below="@+id/edtDataIda"
         android:text="Origem"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
@@ -68,14 +68,14 @@
         android:text="Destino"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <CheckBox android:id="@+id/chbSomenteIda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/edtDataVolta"
-        android:layout_below="@+id/edtDataVolta"
-        android:checked="false"
-        android:onClick="onCheckboxClicked"
-        android:text="Somente Ida"/>
+    <!--<CheckBox android:id="@+id/chbSomenteIda"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignStart="@+id/edtDataVolta"-->
+        <!--android:layout_below="@+id/edtDataVolta"-->
+        <!--android:checked="false"-->
+        <!--android:onClick="onCheckboxClicked"-->
+        <!--android:text="Somente Ida"/>-->
 
     <Spinner
         android:id="@+id/spnDestino"
