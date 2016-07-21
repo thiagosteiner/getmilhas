@@ -30,17 +30,15 @@ public class actLista extends AppCompatActivity {
         ListView lista = (ListView) findViewById(R.id.lvVoos);
 
         Intent it = getIntent();
-        final String dataIda = it.getStringExtra("DataIda");
-        final String dataVolta = it.getStringExtra("DataVolta");
         final String origem = it.getStringExtra("Origem");
         final String destino = it.getStringExtra("Destino");
-        String strjson = it.getStringExtra("Json");
+        String jsonString = it.getStringExtra("Json");
 
 
         ObjectMapper mapper= new ObjectMapper();
         TravelResponse[] response=null;
         try {
-            response = mapper.readValue(strjson, TravelResponse[].class);
+            response = mapper.readValue(jsonString, TravelResponse[].class);//Map to Array of Object
         } catch (IOException e) {
             e.printStackTrace();
         }
