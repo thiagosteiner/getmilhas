@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Rest</string>
-    <string name="id_label">The ID is</string>
+    <string name="app_name">GET MILHAS</string>
+    <string name="id_label">CONSULTE SUA PASSAGEM</string>
     <string name="id_value">[id]</string>
     <string name="content_label">The Content is</string>
     <string name="content_value">[content]</string>
